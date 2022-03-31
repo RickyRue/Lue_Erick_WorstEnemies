@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Lue_Erick_WorstEnemies.iml" filepath="$PROJECT_DIR$/.idea/Lue_Erick_WorstEnemies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Website/worst_enemies/worst_enemies.iml" filepath="$PROJECT_DIR$/Website/worst_enemies/worst_enemies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Capstone/worst_enemies (1) (com.erick.lue.casestudy.worstenemies).iml" filepath="$PROJECT_DIR$/Capstone/worst_enemies (1) (com.erick.lue.casestudy.worstenemies).iml" />
+    </modules>
+  </component>
+</project>
