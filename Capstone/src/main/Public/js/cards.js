@@ -4,16 +4,16 @@ const quizQuestions = [
         {title: "Velveeta Shells", svgUrl: "./images/shells-mac-01.svg", id: "shells"}
     ],
     [
-        {title: "Coke", svgUrl: "./images/shells-mac-01.svg", id: "coke"},
-        {title: "Pepsi", svgUrl: "./images/elbow-mac-01.svg", id: "pepsi"}
+        {title: "Coke", svgUrl: "./images/coke-01.svg", id: "coke"},
+        {title: "Pepsi", svgUrl: "./images/pepsi-01.svg", id: "pepsi"}
     ],
     [
-        {title: "Pronounced 'gif'", svgUrl: "./images/elbow-mac-01.svg", id: "p-gif"},
-        {title: "Pronounced 'jif'", svgUrl: "./images/shells-mac-01.svg", id: "p-jif"}
+        {title: "Pronounced 'gif'", svgUrl: "./images/gif-01.svg", id: "p-gif"},
+        {title: "Pronounced 'jif'", svgUrl: "./images/jif-01.svg", id: "p-jif"}
     ],
     [
-        {title: "Wheels", svgUrl: "./images/shells-mac-01.svg", id: "wheels"},
-        {title: "Doors", svgUrl: "./images/elbow-mac-01.svg", id: "doors"}
+        {title: "Wheels", svgUrl: "./images/wheels-01.svg", id: "wheels"},
+        {title: "Doors", svgUrl: "./images/door-01.svg", id: "doors"}
     ]
 ];
 
@@ -55,7 +55,8 @@ function handleSelectCard(evt, questionPairIndex, selectedCardId) {
         const summaryDiv = document.getElementById("quiz-summary");
 
         let t = `
-            <table>
+               
+            <table class="table table-hover text-center">
                 <thead>
                     <tr>
                         <th>Choice A</th>
@@ -84,6 +85,9 @@ function handleSelectCard(evt, questionPairIndex, selectedCardId) {
 
         summaryDiv.classList.remove("d-none");
         document.getElementById("cards-container").classList.add("d-none");
+        document.getElementById("card-header").classList.add("d-none");
+        document.getElementById("results-header").classList.remove("d-none");
+
     }
 }
 

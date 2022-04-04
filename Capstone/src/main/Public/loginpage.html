@@ -20,7 +20,7 @@
 
     <nav class="bg-primary navbar navbar-dark navbar-expand-lg position-absolute top-0 w-100">
         <div class="container-fluid px-0">
-            <a href ="index.html" class="d-flex flex-grow-1 justify-content-center m-0 navbar-brand w-100">Worst Enemies</a>
+            <div  class="d-flex flex-grow-1 justify-content-center m-0 navbar-brand w-100"><a class="text-decoration-none text-white" href ="index.html">Worst Enemies</a></div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -76,7 +76,7 @@
                             <div class="form-outline mb-4">
 
                                 <input type="password" id="typePasswordX-3" placeholder="Password"
-
+                                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
                                        class="border-2 border-primary form-control rounded-pill" required />
 
