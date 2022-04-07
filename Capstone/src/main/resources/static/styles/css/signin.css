@@ -1,0 +1,25 @@
+body {
+    padding-top: 5rem;
+}
+
+.btn-width{
+    width: 10em;
+
+}
+
+input[type="email"]::placeholder {
+
+    /* Firefox, Chrome, Opera */
+    text-align: center;
+}
+input[type="password"]::placeholder {
+
+    /* Firefox, Chrome, Opera */
+    text-align: center;
+}
+
+input[type="text"]::placeholder {
+
+    /* Firefox, Chrome, Opera */
+    text-align: center;
+}

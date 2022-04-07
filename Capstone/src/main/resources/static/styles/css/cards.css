@@ -1,8 +1,6 @@
 body {
     padding-top: 5rem;
-
 }
-
 .cards-bg {
     border-radius: 1rem;
     height: 32rem;
@@ -15,6 +13,16 @@ body {
     background-size: 75%;
     background-repeat:no-repeat;
     background-position: bottom right;
+}
+
+.cards-bg__elbow-mac {
+
+background-image: url("../images/elbow-mac-01.svg");
+}
+
+.cards-bg__shells-mac {
+
+background-image: url("../images/shells-mac-01.svg");
 }
 
 .cards-hr{
