@@ -10,11 +10,15 @@ public class UserResponse {
     @Column(name="Id", nullable=false)
     private long id;
 
-    @ManyToOne(targetEntity = Question.class, fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-    private Question question = new Question();
+    @ManyToOne
+    @JoinColumn(name="Question_Id", nullable=false)
+    private Question question;
 
-    @ManyToOne(targetEntity = User.class, fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-    private User user = new User();
+
+
+
+
+
 
     @Column(name="CHOICE")
     private boolean choseFirst;

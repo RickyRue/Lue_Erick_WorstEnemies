@@ -2,6 +2,10 @@ package com.erick.lue.casestudy.worstenemies.model;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="USERS")
@@ -19,6 +23,14 @@ public class User {
 
     @Column(name="PASSWORD")
     private String password;
+
+//    @OneToMany(targetEntity = UserResponse.class, fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+//    private List<UserResponse> userResponses = new ArrayList<>();
+        @OneToMany(mappedBy = "id")
+        private Set<UserResponse> userResponses = new HashSet<>();
+
+
+
 
     public long getId() {return id;}
 

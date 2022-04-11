@@ -4,6 +4,7 @@ import com.erick.lue.casestudy.worstenemies.model.User;
 
 import java.util.List;
 
+
 public interface UserService {
     List<User> getAllUsers();
     void saveUser(User user);

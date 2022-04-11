@@ -19,7 +19,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // @formatter:off
         http.authorizeRequests()
                 .mvcMatchers("/","/login","/signup").permitAll()
-                .mvcMatchers("/deleteUser/**","/showFormForUserUpdate/**","/saveUserAdmin/**").hasAnyRole("ADMIN")
+                .mvcMatchers("/deleteUser/**","/showFormForUserUpdate/**",
+                                        "/saveUserAdmin/**","/adminCards","/showNewQuestionForm/**",
+                                        "/saveQuestion/**","/deleteQuestion/{id}/**","/admin_questions","/admin_update_question/**").hasAnyRole("ADMIN")
 //                .mvcMatchers("/showFormForUserUpdate/**").hasAnyRole("ADMIN")
 //                .mvcMatchers("/saveUserAdmin/**").hasAnyRole("ADMIN")
                 .mvcMatchers("/**").hasAnyRole("USER", "ADMIN")
