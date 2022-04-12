@@ -2,13 +2,10 @@ package com.erick.lue.casestudy.worstenemies.model;
 
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
-@Table(name="USERS")
+@Table(name="USERS",uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
 
     @Id
@@ -35,11 +32,30 @@ public class User {
         inverseJoinColumns = @JoinColumn(name="user2_id") )
         private List<User> comparisons;
 
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "users_roles",
+            joinColumns = @JoinColumn(
+                    name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "role_id", referencedColumnName = "id"))
+    private Collection<Role> roles;
 
+    public User() {
+    }
 
+    public User(String userName, String email, String password) {
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+    }
 
-
-
+    public User(String userName, String email, String password, Collection<Role> roles) {
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+        this.roles = roles;
+    }
 
     public long getId() {return id;}
 
@@ -57,4 +73,21 @@ public class User {
 
     public void setPassword(String password) {this.password = password;}
 
+    public Collection<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Collection<Role> roles) {
+        this.roles = roles;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", roles=" + roles +
+                '}';
+    }
 }

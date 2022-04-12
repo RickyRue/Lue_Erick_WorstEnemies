@@ -2,14 +2,17 @@ package com.erick.lue.casestudy.worstenemies.controller;
 
 
 import com.erick.lue.casestudy.worstenemies.model.User;
+import com.erick.lue.casestudy.worstenemies.services.UserRegistrationDto;
 import com.erick.lue.casestudy.worstenemies.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 
 @Controller
@@ -18,28 +21,30 @@ public class UserController {
     private UserService userService;
 
     @Autowired
-    public UserController(UserService userService) {this.userService = userService;}
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/admin")
-    public String viewAdminPage(Model model){
+    public String viewAdminPage(Model model) {
         model.addAttribute("listUsers", userService.getAllUsers());
 
         return "admin";
     }
 
     @GetMapping("/")
-    public String viewHomePage(){
+    public String viewHomePage() {
         return "index";
     }
 
     @GetMapping("/profile")
-    public String viewProfile(){
-        return"profile";
+    public String viewProfile() {
+        return "profile";
     }
 
     @GetMapping("/cards")
-    public String viewCards(){
-        return"cards";
+    public String viewCards() {
+        return "cards";
     }
 
 
@@ -49,23 +54,24 @@ public class UserController {
         return "login";
     }
 
-    @GetMapping("/signup")
-    public String viewNewUserSignUp(Model model) {
-//         create model attribute to bind form data
-        User user = new User();
-        model.addAttribute("user", user);
-        return "signup";
-    }
+//    @GetMapping("/signup")
+//    public String viewNewUserSignUp(Model model) {
+////         create model attribute to bind form data
+//        User user = new User();
+//        model.addAttribute("user", user);
+//        return "signup";
+//    }
 
-    @PostMapping("/saveUser")
+//    @PostMapping("/saveUser")
+//
+//    public String saveUser(@ModelAttribute("user") User user) {
+//        userService.saveUser(user);
+//        return "redirect:/";
+//    }
 
-    public String saveUser(@ModelAttribute ("user") User user) {
-        userService.saveUser(user);
-        return "redirect:/";
-    }
     @PostMapping("/saveUserAdmin")
 
-    public String saveUserAdmin(@ModelAttribute ("user") User user) {
+    public String saveUserAdmin(@ModelAttribute("user") User user) {
         userService.saveUser(user);
         return "redirect:admin";
     }
@@ -80,6 +86,7 @@ public class UserController {
         model.addAttribute("user", user);
         return "admin_update_user";
     }
+
     @GetMapping("/deleteUser/{id}")
     public String deleteUser(@PathVariable(value = "id") long id) {
 
@@ -89,10 +96,14 @@ public class UserController {
     }
 
     @GetMapping("/logout")
-    public String logout(HttpServletRequest request){
+    public String logout(HttpServletRequest request) {
         HttpSession httpSession = request.getSession();
         httpSession.invalidate();
         return "redirect:/";
     }
 
 }
+
+
+
+

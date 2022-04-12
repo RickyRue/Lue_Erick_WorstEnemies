@@ -19,25 +19,15 @@ Some planned features are:
 
 Google Chrome browser is recommended, but not required; most browsers will probably work.
 
-## Usage
+### Daily Progress
 
-Visit `src/main/Public/index.html` in your web browser to view the website.
+4/12/22
 
-Log in with an email and a password, or click create an account and fill out the required fields to get to the cards
-view. (User account creation is superficial right now and still needs to be implemented)
+55% Done
+• Added is user authentication with spring security
+• Added User roles :Admin and User
+• Fixed Nav Links
 
-Click on one of the cards to show the "Next Question" button and then click it. Repeat until you get to the Chosen Cards
-Table. Your selected cards will be shown in bold.
-
-Click on the profile link to see your worst enemies and submit feedback about answering the questions.
-
-Web Service Ai Generated Faces:
-
-https://github.com/ozgrozer/100k-faces
-
-User Stories Template:
-
-As a <role> I want to <action>, so that <reason>
 
 #Users:
 

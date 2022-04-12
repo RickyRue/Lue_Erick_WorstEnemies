@@ -18,7 +18,7 @@
 </head>
 <nav class="bg-primary navbar navbar-dark navbar-expand-lg position-absolute top-0 w-100">
     <div class="container-fluid px-0">
-        <div  class="d-flex flex-grow-1 justify-content-center m-0 navbar-brand w-100"><a class="text-decoration-none text-white" th:href="@{/index}">Worst Enemies</a></div>
+        <div  class="d-flex flex-grow-1 justify-content-center m-0 navbar-brand w-100"><a class="text-decoration-none text-white" th:href="@{/}">Worst Enemies</a></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,7 +34,7 @@
 <section id="login-signup">
 
     <h4 class="mb-5">Create Profile</h4>
-    <form th:action="@{/saveUser}" th:object="${user}" method="POST" onsubmit="passwordValid()">
+    <form th:action="@{/signup}" th:object="${user}" method="POST" onsubmit="passwordValid()">
 
         <div class="form-outline mb-4">
             <input type="email" th:field="*{email}" placeholder="Email"
@@ -57,18 +57,6 @@
                    class="border-2 border-primary form-control rounded-pill" required/>
 
         </div>
-
-        <div>
-
-            <select class="form-select mb-4 rounded-pill border-2 border-primary text-center" aria-label="Default select example">
-                <option selected>Select Your Gender</option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
-                <option value="3">Rather Not Say</option>
-            </select>
-
-        </div>
-
 
         <div class="form-outline mb-4">
             <input type="text" th:field="*{userName}" placeholder="Username"
