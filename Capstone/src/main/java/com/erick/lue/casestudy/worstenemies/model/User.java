@@ -29,6 +29,15 @@ public class User {
         @OneToMany(mappedBy = "id")
         private Set<UserResponse> userResponses = new HashSet<>();
 
+        @ManyToMany
+        @JoinTable(name="Users_Scores",
+        joinColumns = @JoinColumn(name = "user1_id"),
+        inverseJoinColumns = @JoinColumn(name="user2_id") )
+        private List<User> comparisons;
+
+
+
+
 
 
 

@@ -14,6 +14,10 @@ public class UserResponse {
     @JoinColumn(name="Question_Id", nullable=false)
     private Question question;
 
+    @ManyToOne
+    @JoinColumn(name="User_Id", nullable=false)
+    private User user;
+
 
 
 
