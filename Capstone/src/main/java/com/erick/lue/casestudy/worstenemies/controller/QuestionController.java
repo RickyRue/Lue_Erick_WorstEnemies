@@ -72,4 +72,17 @@ public class QuestionController {
 
 
     }
+    @GetMapping("/cardsv2")
+    public String viewCardsV2Page() {
+        return "cardsv2";
+    }
+
+    @GetMapping("/cardsv3")
+    public String viewCardsV3(Model model) {
+        model.addAttribute("listQuestions", questionService.getAllQuestions());
+        return "cardsv3";
+    }
+
+
+
 }

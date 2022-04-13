@@ -28,6 +28,12 @@ Google Chrome browser is recommended, but not required; most browsers will proba
 • Added User roles :Admin and User
 • Fixed Nav Links
 
+4/13/22
+
+60% Done
+• Trying to implement new version of cards with Radio buttons
+• Fixed radio button cards to display normally
+
 
 #Users:
 

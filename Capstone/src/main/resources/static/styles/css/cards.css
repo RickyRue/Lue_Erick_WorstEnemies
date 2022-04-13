@@ -15,16 +15,31 @@ body {
     background-position: bottom right;
 }
 
-.cards-bg__elbow-mac {
-
-background-image: url("../images/elbow-mac-01.svg");
-}
-
-.cards-bg__shells-mac {
-
-background-image: url("../images/shells-mac-01.svg");
-}
-
 .cards-hr{
     width: 4rem;
+}
+
+label {
+    width: 100%;
+}
+
+.card-input-element {
+    display: none;
+}
+
+.card-input {
+
+    padding: 00px;
+}
+
+.card-input:hover {
+    cursor: pointer;
+}
+
+.card-input-element:checked + .card-input {
+     box-shadow: 0 0 5px 5px #2ecc71;
+}
+
+.label-contents{
+    width:24rem;
 }
