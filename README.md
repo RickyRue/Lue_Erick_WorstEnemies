@@ -21,18 +21,21 @@ Google Chrome browser is recommended, but not required; most browsers will proba
 
 ### Daily Progress
 
-4/12/22
+April 14th (65% Done)
 
-55% Done
+• Got the new version of the cards working. Need to link up to navigation bar
+• Working on saving user responses to database
+
+April 13th (60% Done)
+• Trying to implement new version of cards with Radio buttons
+• Fixed radio button cards to display normally
+
+April 12th (55% Done)
 • Added is user authentication with spring security
 • Added User roles :Admin and User
 • Fixed Nav Links
 
-4/13/22
 
-60% Done
-• Trying to implement new version of cards with Radio buttons
-• Fixed radio button cards to display normally
 
 
 #Users:
