@@ -27,7 +27,7 @@ public class UserResponseController {
     @PostMapping("/saveUserResponse")
     public String saveUserResponse(@ModelAttribute("userResponse")@Valid UserResponse userResponse, BindingResult bindingResult){
         userResponseService.saveUserResponse(userResponse);
-        return null;
+        return "/cardsv3";
     }
 
 

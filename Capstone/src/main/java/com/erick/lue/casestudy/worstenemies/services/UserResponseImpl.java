@@ -1,5 +1,6 @@
 package com.erick.lue.casestudy.worstenemies.services;
 
+import com.erick.lue.casestudy.worstenemies.model.User;
 import com.erick.lue.casestudy.worstenemies.model.UserResponse;
 import com.erick.lue.casestudy.worstenemies.repository.QuestionRepository;
 import com.erick.lue.casestudy.worstenemies.repository.UserResponseRepository;
@@ -17,6 +18,6 @@ public class UserResponseImpl implements UserResponseService {
 
     @Override
     public void saveUserResponse(UserResponse userResponse) {
-        this.userResponseRepository.save(userResponse);
+
     }
 }

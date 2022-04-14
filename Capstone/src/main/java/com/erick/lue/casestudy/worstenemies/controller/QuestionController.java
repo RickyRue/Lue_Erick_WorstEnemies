@@ -14,16 +14,19 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.io.IOException;
+import java.security.Principal;
 
 @Controller
 public class QuestionController {
 
     private QuestionService questionService;
 
+    private QuestionRepository questionRepository;
 
     @Autowired
-    public QuestionController(QuestionService questionService) {
+    public QuestionController(QuestionService questionService,  QuestionRepository questionRepository) {
         this.questionService = questionService;
+        this.questionRepository = questionRepository;
     }
 
     @GetMapping("/adminCards")
@@ -74,14 +77,32 @@ public class QuestionController {
     }
     @GetMapping("/cardsv2")
     public String viewCardsV2Page() {
+
+
+
+
         return "cardsv2";
     }
+
+
 
     @GetMapping("/cardsv3")
     public String viewCardsV3(Model model) {
         model.addAttribute("listQuestions", questionService.getAllQuestions());
         return "cardsv3";
     }
+
+    @GetMapping("/cardsv3/{id}")
+    public String getQuestions(@PathVariable(value = "id") long id, Model model) {
+        Question question = questionService.getQuestionById(id);
+        model.addAttribute("id", question.getId());
+        model.addAttribute("first_text", question.getFirst_text());
+        model.addAttribute("second_text", question.getSecond_text());
+        return "cardsv3";
+    }
+
+
+
 
 
 
