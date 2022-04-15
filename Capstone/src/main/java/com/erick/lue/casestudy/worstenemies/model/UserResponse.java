@@ -7,21 +7,18 @@ import javax.persistence.*;
 @Table(name="USER_RESPONSES")
 public class UserResponse {
     @Id
-    @Column(name="Id", nullable=false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @ManyToOne
-    @JoinColumn(name="Question_Id", nullable=false)
     private Question question;
 
     @ManyToOne
-    @JoinColumn(name="User_Id", nullable=false)
     private User user;
 
 
-
-    @Column(name="CHOICE")
-    private boolean choseFirst;
+    @Column(name = "CHOICE")
+    private boolean choice;
 
     public long getId() {
         return id;
@@ -46,12 +43,12 @@ public class UserResponse {
     public void setUser(User user) {
         this.user = user;
     }
-
-    public boolean isChoseFirst() {
-        return choseFirst;
+//true if left false if right
+    public boolean isChoice() {
+        return choice;
     }
 
-    public void setChoseFirst(boolean choseFirst) {
-        this.choseFirst = choseFirst;
+    public void setChoice(boolean choice) {
+        this.choice = choice;
     }
 }

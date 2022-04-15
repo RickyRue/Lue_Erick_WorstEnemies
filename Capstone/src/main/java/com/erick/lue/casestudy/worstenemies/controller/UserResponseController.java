@@ -3,7 +3,10 @@ package com.erick.lue.casestudy.worstenemies.controller;
 
 import com.erick.lue.casestudy.worstenemies.model.UserResponse;
 import com.erick.lue.casestudy.worstenemies.services.UserResponseService;
+import com.erick.lue.casestudy.worstenemies.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +20,7 @@ public class UserResponseController {
 
     private UserResponseService userResponseService;
 
+
     @Autowired
     public UserResponseController(UserResponseService userResponseService){
         this.userResponseService = userResponseService;
@@ -25,11 +29,12 @@ public class UserResponseController {
 
 
     @PostMapping("/saveUserResponse")
-    public String saveUserResponse(@ModelAttribute("userResponse")@Valid UserResponse userResponse, BindingResult bindingResult){
+    public String saveUserResponse(@ModelAttribute("userResponse")@Valid UserResponse userResponse, BindingResult result){
+
 
         userResponseService.saveUserResponse(userResponse);
 
-        return "redirect: /cardsv3";
+        return "redirect:/cardsv3";
     }
 
 

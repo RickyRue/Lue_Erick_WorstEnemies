@@ -17,7 +17,7 @@ public class UserResponseImpl implements UserResponseService {
     @Override
     public UserResponse saveUserResponse(UserResponse userResponse) {
         userResponse.setUser(userResponse.getUser());
-        userResponse.setChoseFirst(userResponse.isChoseFirst());
+        userResponse.setChoice(userResponse.isChoice());
         userResponse.setQuestion(userResponse.getQuestion());
 
         return userResponseRepository.save(userResponse);

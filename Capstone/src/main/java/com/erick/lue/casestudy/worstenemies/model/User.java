@@ -23,7 +23,7 @@ public class User {
 
 //    @OneToMany(targetEntity = UserResponse.class, fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
 //    private List<UserResponse> userResponses = new ArrayList<>();
-        @OneToMany(mappedBy = "id")
+        @OneToMany(mappedBy = "user")
         private Set<UserResponse> userResponses = new HashSet<>();
 
         @ManyToMany

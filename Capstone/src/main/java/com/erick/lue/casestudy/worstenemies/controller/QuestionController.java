@@ -4,7 +4,10 @@ import com.erick.lue.casestudy.worstenemies.model.Question;
 import com.erick.lue.casestudy.worstenemies.model.User;
 import com.erick.lue.casestudy.worstenemies.repository.QuestionRepository;
 import com.erick.lue.casestudy.worstenemies.services.QuestionService;
+import com.erick.lue.casestudy.worstenemies.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -23,10 +26,16 @@ public class QuestionController {
 
     private QuestionRepository questionRepository;
 
+    private UserService userService;
+
+
+
     @Autowired
-    public QuestionController(QuestionService questionService,  QuestionRepository questionRepository) {
+    public QuestionController(QuestionService questionService,  QuestionRepository questionRepository, UserService userService) {
         this.questionService = questionService;
         this.questionRepository = questionRepository;
+        this.userService = userService;
+
     }
 
     @GetMapping("/adminCards")
@@ -84,23 +93,38 @@ public class QuestionController {
         return "cardsv2";
     }
 
-
-
     @GetMapping("/cardsv3")
-    public String viewCardsV3(Model model) {
-        model.addAttribute("listQuestions", questionService.getAllQuestions());
+    public String viewCardsV3Page() {
+
+
+
         return "cardsv3";
     }
+
 
     @GetMapping("/cardsv3/{id}")
     public String getQuestions(@PathVariable(value = "id") long id, Model model) {
         Question question = questionService.getQuestionById(id);
+
+        String username;
+
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        if (principal instanceof UserDetails) {
+            username = ((UserDetails)principal).getUsername();
+        } else {
+            username = principal.toString();
+        }
+        long userId=userService.findByEmail(username).getId();
+
+        model.addAttribute("userId", userId);
         model.addAttribute("id", question.getId());
         model.addAttribute("first_text", question.getFirst_text());
+        model.addAttribute("first_svg", question.getFirst_svg());
         model.addAttribute("second_text", question.getSecond_text());
+        model.addAttribute("second_svg", question.getSecond_svg());
         return "cardsv3";
     }
-
 
 
 
