@@ -1,7 +1,7 @@
 const quizQuestions = [
     [
-        {title: "Kraft Blue Box", svgUrl: "./styles/images/elbow-mac-01.svg", id: "kraft"},
-        {title: "Velveeta Shells", svgUrl: "./styles/images/shells-mac-01.svg", id: "shells"}
+        {title: "Kraft Blue Box", svgUrl: "./styles/images/elbow-01.svg", id: "kraft"},
+        {title: "Velveeta Shells", svgUrl: "./styles/images/shells-01.svg", id: "shells"}
     ],
     [
         {title: "Coke", svgUrl: "./styles/images/coke-01.svg", id: "coke"},
@@ -13,7 +13,7 @@ const quizQuestions = [
     ],
     [
         {title: "Wheels", svgUrl: "./styles/images/wheels-01.svg", id: "wheels"},
-        {title: "Doors", svgUrl: "./styles/images/door-01.svg", id: "doors"}
+        {title: "Doors", svgUrl: "./styles/images/doors-01.svg", id: "doors"}
     ]
 ];
 

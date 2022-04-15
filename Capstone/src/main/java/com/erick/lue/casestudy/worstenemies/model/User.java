@@ -21,8 +21,7 @@ public class User {
     @Column(name="PASSWORD")
     private String password;
 
-//    @OneToMany(targetEntity = UserResponse.class, fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-//    private List<UserResponse> userResponses = new ArrayList<>();
+
         @OneToMany(mappedBy = "user")
         private Set<UserResponse> userResponses = new HashSet<>();
 

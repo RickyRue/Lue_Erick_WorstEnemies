@@ -21,6 +21,10 @@ Google Chrome browser is recommended, but not required; most browsers will proba
 
 ### Daily Progress
 
+April 15th (70% Done)
+• Able to save user responses to the data
+• Able to show images on cards
+
 April 14th (65% Done)
 
 • Got the new version of the cards working. Need to link up to navigation bar

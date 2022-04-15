@@ -13,6 +13,7 @@ body {
     background-size: 75%;
     background-repeat:no-repeat;
     background-position: bottom right;
+    z-index: -5;
 }
 
 .cards-hr{
