@@ -7,11 +7,6 @@ such as is Kraft Blue Box better than Velveeta. Pick and side and find out who y
 
 This project is built using Springboot, Java, HTML, CSS, JavaScript and Bootstrap.
 
-Some planned features are:
-- More questions
-- Messaging Board
-- Complete Repressive Design.
-
 ## Table of Contents
 -[Installation](#Installation)
 
@@ -19,8 +14,15 @@ Some planned features are:
 
 -[User Stories](#User-Stories)
 
--[Figma Mock-Up Link] (https://www.figma.com/file/h4cgmBr4LQWgtHecmfH2cn/Worst-Enemies---Prototype?node-id=2%3A2)
+-[Figma Mock-Up Link](https://www.figma.com/file/h4cgmBr4LQWgtHecmfH2cn/Worst-Enemies---Prototype?node-id=2%3A2)
 
+-[Schema Diagram](https://drive.google.com/file/d/10NCCW-xNtfKOiuEB4PorvalUc6J6enRD/view?usp=sharing)
+
+-[Technical Architecture Diagram](https://drive.google.com/file/d/1WhpjExsebPTJl1jqqwDyLaLgPobohYu5/view?usp=sharing)
+
+-[Technical Challenges](#Technical-Challenges)
+
+-[Future Improvements](#Future-Improvements)
 ## Installation
 
 ### Pre-requisites
@@ -46,6 +48,8 @@ April 12th (55% Done)
 • Added is user authentication with spring security
 • Added User roles :Admin and User
 • Fixed Nav Links
+
+###Technical Challenges
 
 
 ##User Stories
@@ -102,6 +106,12 @@ What is more of a salad? Fruit salad or potato salad?
 Is Coke better than Pepsi?
 
 Should you eat rice with a fork, a spoon or chopsticks?
+
+##Future Improvements
+Some planned features are:
+- More questions
+- Messaging Board
+- Complete Repressive Design.
 
 
 
