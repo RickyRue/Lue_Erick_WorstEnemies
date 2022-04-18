@@ -34,7 +34,7 @@ public class UserResponseController {
 
         userResponseService.saveUserResponse(userResponse);
 
-        return "redirect:/cardsv3";
+        return "redirect:/cards";
     }
 
 

@@ -84,25 +84,13 @@ public class QuestionController {
 
 
     }
-    @GetMapping("/cardsv2")
-    public String viewCardsV2Page() {
 
-
-
-
-        return "cardsv2";
+    @GetMapping("/cards")
+    public String viewCards() {
+        return "cards";
     }
 
-    @GetMapping("/cardsv3")
-    public String viewCardsV3Page() {
-
-
-
-        return "cardsv3";
-    }
-
-
-    @GetMapping("/cardsv3/{id}")
+    @GetMapping("/cards/{id}")
     public String getQuestions(@PathVariable(value = "id") long id, Model model) {
         Question question = questionService.getQuestionById(id);
 
@@ -123,7 +111,7 @@ public class QuestionController {
         model.addAttribute("first_svg", question.getFirst_svg());
         model.addAttribute("second_text", question.getSecond_text());
         model.addAttribute("second_svg", question.getSecond_svg());
-        return "cardsv3";
+        return "cards";
     }
 
 

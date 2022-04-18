@@ -31,6 +31,12 @@ Google Chrome browser is recommended, but not required; most browsers will proba
 
 ### Daily Progress
 
+April 118th (75% Done)
+• Updated README file as per capstone requirements 
+• Added and Updated all cards to have unique icons
+• Fixed navigation so, it is cleaner
+• Added in restrictions for Users and Admins
+
 April 15th (70% Done)
 • Able to save user responses to the data
 • Able to show images on cards

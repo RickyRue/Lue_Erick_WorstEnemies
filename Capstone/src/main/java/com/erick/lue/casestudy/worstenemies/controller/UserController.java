@@ -42,11 +42,6 @@ public class UserController {
         return "profile";
     }
 
-    @GetMapping("/cards")
-    public String viewCards() {
-        return "cards";
-    }
-
 
     @GetMapping("/login")
     public String viewLogin() {

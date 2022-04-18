@@ -27,7 +27,7 @@
         <div class="navbar-nav w-100 justify-content-end px-5" id="navbarNav">
             <div class="nav-link active" aria-current="page" style="z-index: 5;"><a class="text-decoration-none text-white" th:href="@{/profile}">Profile</a></div>
             <div class="nav-link active" aria-current="page" style="z-index: 5;"><a class="text-decoration-none text-white" th:href="@{/admin}">Admin Panel</a></div>
-            <div class="nav-link active" aria-current="page" style="z-index: 5;"><a class="text-decoration-none text-white" th:href="@{/adminCards}">Admin Cards</a></div>
+
             <div class="nav-link active" aria-current="page" style="z-index: 5;"><a class="text-decoration-none text-white" sec:authorize="isAuthenticated()"th:href="@{/logout}">Logout</a></div>
 
         </div>

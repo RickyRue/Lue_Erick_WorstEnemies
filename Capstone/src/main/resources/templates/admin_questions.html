@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 
 <head>
     <meta charset="UTF-8">
@@ -28,13 +29,19 @@
         <div class="navbar-nav w-100 justify-content-end px-5" id="navbarNav">
             <div class="nav-link active" aria-current="page" style="z-index: 5;"><a class="text-decoration-none text-white" th:href="@{/profile}">Profile</a></div>
             <div class="nav-link active" aria-current="page" style="z-index: 5;"><a class="text-decoration-none text-white" th:href="@{/admin}">Admin Panel</a></div>
-            <div class="nav-link active" aria-current="page" style="z-index: 5;"><a class="text-decoration-none text-white" th:href="@{/adminCards}">Admin Cards</a></div>
+            <div class="nav-link active" aria-current="page" style="z-index: 5;"><a class="text-decoration-none text-white" sec:authorize="isAuthenticated()"th:href="@{/logout}">Logout</a></div>
         </div>
     </div>
     </div>
 </nav>
 
 <div class="container my-2">
+    <div class="mb-4">
+        <h3>Admin Panel Navigation</h3>
+        <a th:href="@{/admin}" class="rounded-pill btn btn-primary btn-sm">Admin Users List</a>
+        <a th:href="@{/adminCards}" class="rounded-pill btn btn-primary btn-sm">Admin Cards List</a>
+
+    </div>
     <h1>Card List</h1>
 
     <a th:href="@{/showNewQuestionForm}" class="btn btn-primary btn-sm mb-3"> Add Question </a>
