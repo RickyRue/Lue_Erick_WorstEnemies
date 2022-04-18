@@ -5,13 +5,21 @@
 A social place where you can stand on your soapbox and tell the world how you really feel about controversial topics
 such as is Kraft Blue Box better than Velveeta. Pick and side and find out who your worst enemy is!
 
-This project is built using HTML, CSS, JavaScript and Bootstrap.
+This project is built using Springboot, Java, HTML, CSS, JavaScript and Bootstrap.
 
 Some planned features are:
 - More questions
-- User Profiles
 - Messaging Board
 - Complete Repressive Design.
+
+## Table of Contents
+-[Installation](#Installation)
+
+-[Daily Progress](#Daily-Progress)
+
+-[User Stories](#User-Stories)
+
+-[Figma Mock-Up Link] (https://www.figma.com/file/h4cgmBr4LQWgtHecmfH2cn/Worst-Enemies---Prototype?node-id=2%3A2)
 
 ## Installation
 
@@ -40,9 +48,9 @@ April 12th (55% Done)
 • Fixed Nav Links
 
 
+##User Stories
 
-
-#Users:
+###Users:
 
 1: As a user I want to make a profile so that I can see my worst enemies.
 
@@ -50,7 +58,7 @@ April 12th (55% Done)
 
 3: As a user I want to be able to communicate with other users, so that I can express my opinions.
 
-#Admin:
+###Admin:
 
 1: As an Admin, I want to be able to approve user submiited cards, so that users will have a better experience.
 
@@ -58,9 +66,7 @@ April 12th (55% Done)
 
 3:
 
-#Figma Mockup Link
 
-https://www.figma.com/file/h4cgmBr4LQWgtHecmfH2cn/Worst-Enemies---Prototype?node-id=2%3A2
 
 #Questions:
 
