@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -45,12 +46,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserById(long id) {
-        User user = userRepository.getById(id);
-        if (user == null){
-            throw new UserNotFoundException();
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (optionalUser.isPresent()){
+            User user = optionalUser.get();
+            return user;
+
         }
 
-        return user;
+        throw new UserNotFoundException();
     }
 
     @Override

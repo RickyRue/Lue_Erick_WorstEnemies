@@ -26,7 +26,7 @@ class UserServiceImplTest {
 
         User user1 = new User();
         user1.setUserName("Test2");
-        user1.setEmail("test1@mail.com");
+        user1.setEmail("test2@mail.com");
         user1.setPassword("Abcd1234!");
         userService.saveUser(user1);
         int afterAddingMoreUsers = userService.getAllUsers().size();
