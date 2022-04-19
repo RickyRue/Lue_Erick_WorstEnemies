@@ -24,10 +24,15 @@ public class UserResponseImpl implements UserResponseService {
 
 
     @Override
-    public List<UserResponse> findAllResponsesById(Long id) {
-        userResponseRepository.findByUserId(id).getUser().getUserName();
+    public List<UserResponse> findByUserId(long userId) {
 
-        return this.userResponseRepository.findAll();
+        return userResponseRepository.findByUserId(userId);
+    }
+
+    @Override
+    public List<UserResponse> getAllUserResponses() {
+
+        return userResponseRepository.findAll();
     }
 
     @Override

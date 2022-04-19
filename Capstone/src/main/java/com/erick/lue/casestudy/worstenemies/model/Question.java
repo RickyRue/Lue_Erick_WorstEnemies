@@ -52,4 +52,6 @@ public class Question {
     public String getSecond_svg() {return second_svg;}
 
     public void setSecond_svg(String second_svg) {this.second_svg = second_svg;}
+
+
 }

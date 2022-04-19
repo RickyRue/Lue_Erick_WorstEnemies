@@ -30,8 +30,12 @@ This project is built using Springboot, Java, HTML, CSS, JavaScript and Bootstra
 Google Chrome browser is recommended, but not required; most browsers will probably work.
 
 ### Daily Progress
+April 19th (80% Done)
+• Got all three of the provided tests to work
+• Added in user response and all user response tables
 
-April 118th (75% Done)
+
+April 18th (75% Done)
 • Updated README file as per capstone requirements 
 • Added and Updated all cards to have unique icons
 • Fixed navigation so, it is cleaner
