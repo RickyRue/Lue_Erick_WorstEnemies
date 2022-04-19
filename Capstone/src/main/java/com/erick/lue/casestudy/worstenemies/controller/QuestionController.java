@@ -87,7 +87,7 @@ public class QuestionController {
 
     @GetMapping("/cards")
     public String viewCards() {
-        return "cards";
+        return "redirect:/cards/3";
     }
 
     @GetMapping("/cards/{id}")
