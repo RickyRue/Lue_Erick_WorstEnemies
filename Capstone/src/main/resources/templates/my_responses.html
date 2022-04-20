@@ -43,16 +43,13 @@
     <tr>
 
         <th>Choice</th>
-        <th> Left Text = True </th>
-        <th> Right Text = False </th>
+
     </tr>
     </thead>
     <tbody>
     <tr th:each="userResponses : ${myResponseList}">
 
-        <td th:text="${userResponses.choice}"></td>
-        <td th:text="${userResponses.question.first_text}"></td>
-        <td th:text="${userResponses.question.second_text}"></td>
+        <td th:text="${userResponses.choice ? userResponses.question.first_text : userResponses.question.second_text }"></td>
 
         </td>
     </tr>

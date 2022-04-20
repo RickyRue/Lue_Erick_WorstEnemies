@@ -11,5 +11,6 @@ public interface UserResponseService {
     List<UserResponse> findByUserId(long userId);
     List<UserResponse> getAllUserResponses();
     UserResponse saveUserResponse(UserResponse userResponse);
+    List<UserResponse> findByQuestionId(long questionsId);
 
 }

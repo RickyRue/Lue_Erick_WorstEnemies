@@ -46,5 +46,10 @@ public class UserResponseImpl implements UserResponseService {
 
     }
 
+    @Override
+    public List<UserResponse> findByQuestionId(long questionsId) {
+        return userResponseRepository.findByQuestionId(questionsId);
+    }
+
 
 }
