@@ -1,10 +1,7 @@
 package com.erick.lue.casestudy.worstenemies.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name="QUESTIONS")
@@ -54,4 +51,17 @@ public class Question {
     public void setSecond_svg(String second_svg) {this.second_svg = second_svg;}
 
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Question question = (Question) o;
+        return id == question.id && Objects.equals(first_text, question.first_text) && Objects.equals(first_svg, question.first_svg) && Objects.equals(second_text, question.second_text) && Objects.equals(second_svg, question.second_svg);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, first_text, first_svg, second_text, second_svg);
+    }
 }

@@ -28,7 +28,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                         "/styles/css/**",
                         "/styles/images/**",
                         "/styles/webjars/**").permitAll()
-                .antMatchers("/admin","/saveUserAdmin","/deleteUser/{id}",
+                .antMatchers("/admin","/saveUserAdmin","/deleteUser/**}",
                         "/admin_update_user/{id}","/adminCards","/showNewQuestionForm",
                         "/saveQuestion","/deleteQuestion/{id}","/admin_update_question/{id}").hasRole("ADMIN")
                 .antMatchers("/cards","/profile","/saveUserResponse","/myResponses","/allUserResponses","/enemies").hasAnyRole("ADMIN","USER")

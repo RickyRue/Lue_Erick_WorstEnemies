@@ -9,10 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 
-
+@Transactional
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class UserServiceImplTest {
 
@@ -40,7 +41,7 @@ class UserServiceImplTest {
         List<User> allUsers = userService.getAllUsers();
         User user1 = allUsers.get(0);
         if (user1 != null) {
-            User user2 = userService.getUserById(1);
+            User user2 = userService.getUserById(10);
             Assertions.assertThat(user1).isEqualTo(user2);
         }
     }

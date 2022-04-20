@@ -51,4 +51,13 @@ public class UserResponse {
     public void setChoice(boolean choice) {
         this.choice = choice;
     }
+
+    public UserResponse() {
+    }
+
+    public UserResponse(Question question, User user, boolean choice) {
+        this.question = question;
+        this.user = user;
+        this.choice = choice;
+    }
 }

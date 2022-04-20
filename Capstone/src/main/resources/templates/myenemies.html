@@ -47,7 +47,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="userScores : ${myResponseList}">
+    <tr th:each="userScores : ${UserScores}">
 
       <td th:text="${userResponses.choice ? userResponses.question.first_text : userResponses.question.second_text }"></td>
 

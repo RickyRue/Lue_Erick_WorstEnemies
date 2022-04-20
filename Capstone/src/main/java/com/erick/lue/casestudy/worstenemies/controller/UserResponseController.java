@@ -93,16 +93,17 @@ public class UserResponseController {
 
         List<UserResponse> myResponseList = userResponseService.findByUserId(userId);
 
+
         for (UserResponse myResponse : myResponseList)
         {
-            System.out.println("THIS IS TRASH" +myResponse);
-            List<UserResponse> thisQuestionResponses = userResponseService.findByQuestionId(myResponse.getQuestion().getId());
-            System.out.println("THIS IS POOP" +thisQuestionResponses);
+            System.out.println("THIS IS MY RESPONSE LIST" +myResponse);
+            List<UserResponse> thisQuestionResponses = userResponseService.findByUserId(myResponse.getQuestion().getId());
+            System.out.println("THIS IS MY QUESTION RESPONSE" +thisQuestionResponses);
                 for (UserResponse thisQuestionResponse: thisQuestionResponses)
 
 
                  {
-                     System.out.println("THIS IS SHIT" +thisQuestionResponse);
+                     System.out.println("THIS IS QUESTION RESPONSE" +thisQuestionResponse);
                      long thisQuestionUserId = thisQuestionResponse.getUser().getId();
                      if (thisQuestionUserId == userId) {
                      continue;
@@ -118,13 +119,13 @@ public class UserResponseController {
 
 
                  }
-                   
+
                  }
-                 
+
 
 
         }
-        System.out.println("THIS IS GARBAGE" + scores);
+        System.out.println("THIS IS MY SCORE" + scores);
         scores.forEach((enemyId, enemyScore) ->{
             UsersScores usersScores = new UsersScores();
             usersScores.setScore(enemyScore);
