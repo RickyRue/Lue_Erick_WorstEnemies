@@ -42,7 +42,7 @@ public class UserResponseController {
 
 
     @PostMapping("/saveUserResponse")
-    public String saveUserResponse(@ModelAttribute("userResponse")@Valid UserResponse userResponse, BindingResult result){
+    public String saveUserResponse(@Valid UserResponse userResponse, BindingResult result){
 
 
         userResponseService.saveUserResponse(userResponse);

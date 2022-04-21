@@ -5,12 +5,20 @@ import com.erick.lue.casestudy.worstenemies.model.User;
 import com.erick.lue.casestudy.worstenemies.repository.UserRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
+
+import static org.junit.jupiter.params.provider.Arguments.arguments;
+import static org.mockito.Mockito.when;
 
 
 @Transactional
@@ -19,6 +27,9 @@ class UserServiceImplTest {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private UserRepository userRepository;
 
     @Test
     void getAllUsers() {
@@ -45,4 +56,6 @@ class UserServiceImplTest {
             Assertions.assertThat(user1).isEqualTo(user2);
         }
     }
-}
+
+
+    }

@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 public interface UserScoresRepository extends JpaRepository <UsersScores,Long> {
     List<UsersScores> findByUser1_IdOrderByScoreDesc(long userId1);
-//    Slice<UsersScores> findByUser2_IdOrderByScoreDesc(long userId1);
+
 
 }
