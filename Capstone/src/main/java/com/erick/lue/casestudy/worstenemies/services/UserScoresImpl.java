@@ -20,6 +20,11 @@ public class UserScoresImpl implements  UserScoresService{
     }
 
     @Override
+    public List<UsersScores> findByUser1_Id(long userId1) {
+        return userScoresRepository.findByUser1_IdOrderByScoreDesc(userId1);
+    }
+
+    @Override
     public List<UsersScores> getAllUsersScores() {
         return userScoresRepository.findAll();
     }

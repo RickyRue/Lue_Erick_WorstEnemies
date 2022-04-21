@@ -4,13 +4,15 @@ import com.erick.lue.casestudy.worstenemies.model.UsersScores;
 import com.erick.lue.casestudy.worstenemies.services.UserScoresService;
 import com.erick.lue.casestudy.worstenemies.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Slice;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
-
+@Controller
 public class UserScoresController {
 
     private UserScoresService userScoresService;
@@ -22,8 +24,16 @@ public class UserScoresController {
         this.userService = userService;
     }
 
-    @GetMapping("/myenemies")
-    public String viewListofMyEnemies(Model model){
+    @GetMapping("/allEnemiesScores")
+    public String viewAllScores(Model model){
+
+        model.addAttribute("listOfScores", userScoresService.getAllUsersScores());
+        return "all_usersscores";
+
+    }
+
+    @GetMapping("/viewMyEnemies")
+    public String viewMyEnemies(Model model){
         String username;
 
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -35,8 +45,11 @@ public class UserScoresController {
         }
         long userId=userService.findByEmail(username).getId();
 
-        List<UsersScores> myEnemies = userScoresService.findByUserId(userId);
-        model.addAttribute("myEnemies", myEnemies);
+        List<UsersScores> myScoresList = userScoresService.findByUser1_Id(userId);
 
+        model.addAttribute("myScoresList", myScoresList);
+        return "view_my_enemies";
     }
+
+
 }

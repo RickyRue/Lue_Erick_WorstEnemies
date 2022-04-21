@@ -9,6 +9,7 @@ import java.util.List;
 
 
 public interface UserScoresService {
+    List<UsersScores> findByUser1_Id(long userId1);
     List<UsersScores> getAllUsersScores();
     void saveUsersScores(UsersScores usersScores);
 }
