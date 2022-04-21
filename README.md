@@ -30,7 +30,11 @@ This project is built using Springboot, Java, HTML, CSS, JavaScript and Bootstra
 Google Chrome browser is recommended, but not required; most browsers will probably work.
 
 ### Daily Progress
-April 20th 85% Done)
+April 21ts (85% Done)
+• Added in a parameterized test 
+• Able to display enemies of users.
+
+April 20th (85% Done)
 • Added in a few more tests
 • Almost finished with the matching up and displaying enemies.
 
