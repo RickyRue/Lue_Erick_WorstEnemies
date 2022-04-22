@@ -10,6 +10,8 @@ This project is built using Springboot, Java, HTML, CSS, JavaScript and Bootstra
 ## Table of Contents
 -[Installation](#Installation)
 
+-[Grading Rubric](https://docs.google.com/document/d/1AgDZUG9jeYiV7L92cDVkrvcrapaRoajy4mBoG57F764/edit) 88.83% Done
+
 -[Daily Progress](#Daily-Progress)
 
 -[User Stories](#User-Stories)
