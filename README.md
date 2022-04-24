@@ -1,6 +1,6 @@
 # Lue, Erick - Worst Enemies
 
-[GitHub Profile](https://github.com/RickyRue) • Java Bootcamp • SBA HTML/CSS/JS
+[GitHub Profile](https://github.com/RickyRue) • Java Bootcamp • Capstone Project
 
 A social place where you can stand on your soapbox and tell the world how you really feel about controversial topics
 such as is Kraft Blue Box better than Velveeta. Pick and side and find out who your worst enemy is!
@@ -8,6 +8,7 @@ such as is Kraft Blue Box better than Velveeta. Pick and side and find out who y
 This project is built using Springboot, Java, HTML, CSS, JavaScript and Bootstrap.
 
 ## Table of Contents
+
 -[Installation](#Installation)
 
 -[Grading Rubric](https://docs.google.com/document/d/1AgDZUG9jeYiV7L92cDVkrvcrapaRoajy4mBoG57F764/edit) 88.83% Done
@@ -29,6 +30,7 @@ This project is built using Springboot, Java, HTML, CSS, JavaScript and Bootstra
 
 
 -[Future Improvements](#Future-Improvements)
+
 ## Installation
 
 ### Pre-requisites
@@ -78,16 +80,26 @@ April 12th (55% Done)<br>
 • Added User roles :Admin and User<br>
 • Fixed Nav Links<br>
 
-###Technical Challenges
+## Technical Challenges
+#### Being able to implement everything from my mock-up:
 
+• My background is in design and I enjoy making fun and easy to use interfaces but didn’t know how to implement certain features and wasn’t able to create my design exactly like my mock up. The solution to this issue was “killing my babies”. By this I mean that even though I made something that I really liked, I needed to be able to cut my losses when necessary to be able to complete the project on time and satisfy the requirements.
 
-##User Stories
+#### Hooking up the front-end to the back-end
 
-###Users:
+• Having some experience with front-end development, hooking up the back end was a big hurdle for me. Having to figure out how the different sets of data were to be stored inside of the database was the first step. After talking with fellow classmates I was able to clearly understand how I wanted the information to be stored, which really helped me get this project off the ground.
+
+#### File Uploads
+
+• Trying to figure out how to get file uploads was a difficult task. I tried to implement a file uploader but after a day or two it just wasn’t working. To solve this issue I decided to store the name of the file into the database and used thymeleaf to pull the names of the files, to mock the file upload process.
+
+## User Stories
+
+### Users:
 
 1: As a user I want to make a profile so that I can see my worst enemies.
 
-2: As a user I want to be able to see how I asnwered the questions
+2: As a user I want to be able to see how I answered the questions
 
 3: As a user I want to be able to update my Username and Email
 
@@ -106,6 +118,19 @@ April 12th (55% Done)<br>
 4: As an Admin I want to be able to update and delete users.
 
 
+##Future Improvements
+
+• Adding in a chat features called “Soap Boxes”
+
+• User suggested questions
+
+• Custom profiles
+
+• A true matching up of enemies
+
+• Different categories of questions
+
+• Complete responsive design
 
 #Questions
 
@@ -142,11 +167,6 @@ Is Coke better than Pepsi?
 
 Should you eat rice with a fork, a spoon or chopsticks?
 
-##Future Improvements
-Some planned features are:
-- More questions
-- Messaging Board
-- Complete Repressive Design.
 
 
 

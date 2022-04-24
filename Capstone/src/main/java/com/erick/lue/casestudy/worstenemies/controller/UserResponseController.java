@@ -137,7 +137,7 @@ public class UserResponseController {
         });
 
 
-        return "myenemies";
+        return "redirect:/viewMyEnemies";
     }
 
 
