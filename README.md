@@ -9,9 +9,17 @@ This project is built using Springboot, Java, HTML, CSS, JavaScript and Bootstra
 
 ## Table of Contents
 
+-[Capstone Deck](https://github.com/RickyRue/Lue_Erick_WorstEnemies/blob/main/Capstone%20Deck.pdf)
+
+-[Tech Stack](#Tech-Stack)
+
+-[Schema Diagram](#Schema-Diagram)
+
 -[Installation](#Installation)
 
 -[Grading Rubric](https://docs.google.com/document/d/1AgDZUG9jeYiV7L92cDVkrvcrapaRoajy4mBoG57F764/edit) 88.83% Done
+
+-[Figma Mock-Up Link](https://www.figma.com/file/h4cgmBr4LQWgtHecmfH2cn/Worst-Enemies---Prototype?node-id=2%3A2)
 
 -[Daily Progress](#Daily-Progress)
 
@@ -19,9 +27,7 @@ This project is built using Springboot, Java, HTML, CSS, JavaScript and Bootstra
 
 -[Questions](#Questions)
 
--[Figma Mock-Up Link](https://www.figma.com/file/h4cgmBr4LQWgtHecmfH2cn/Worst-Enemies---Prototype?node-id=2%3A2)
 
--[Schema Diagram](https://drive.google.com/file/d/10NCCW-xNtfKOiuEB4PorvalUc6J6enRD/view?usp=sharing)
 
 -[Technical Architecture Diagram](https://drive.google.com/file/d/1WhpjExsebPTJl1jqqwDyLaLgPobohYu5/view?usp=sharing)
 
@@ -30,6 +36,14 @@ This project is built using Springboot, Java, HTML, CSS, JavaScript and Bootstra
 
 
 -[Future Improvements](#Future-Improvements)
+
+## Tech Stack
+
+<img src="images/TechStack-01.jpg" width="300">
+
+## Schema Diagram
+
+<img src="images/Worst Enemies DB Scheme.png" width="300">
 
 ## Installation
 
