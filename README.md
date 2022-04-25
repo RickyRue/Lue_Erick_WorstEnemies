@@ -34,10 +34,28 @@ This project is built using Springboot, Java, HTML, CSS, JavaScript and Bootstra
 ## Installation
 
 ### Pre-requisites
+• Please run these SQL statements if Databases are not automatically created:
 
-Google Chrome browser is recommended, but not required; most browsers will probably work.
+CREATE DATABASE `worst_enemies`;
+CREATE DATABASE `worst_enemies_testdb`;
+
+
+• Google Chrome browser is recommended, but not required; most browsers will probably work.
+
+Admin Email and Login:
+
+Email: admin@mail.com
+
+Password: 6j@NW.MfU9XiXjq
+
+
 
 ### Daily Progress
+
+April 25ts (100% Done)<br>
+• Added in SQL Data <br>
+• Had Anthony run my app on his machine<br>
+
 April 22ts (93% Done)<br>
 • Made Presentation <br>
 • Fixed some formatting on ReadMe file.<br>
