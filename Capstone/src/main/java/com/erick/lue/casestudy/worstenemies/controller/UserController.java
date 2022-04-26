@@ -74,10 +74,10 @@ public class UserController {
     @GetMapping("/admin_update_user/{id}")
     public String showFormForUserUpdate(@PathVariable(value = "id") long id, Model model) {
 
-        // get employee from the service
+        // get user from the service
         User user = userService.getUserById(id);
 
-        // set employee as a model attribute to pre-populate the form
+        // set user as a model attribute to pre-populate the form
         model.addAttribute("user", user);
         return "admin_update_user";
     }
@@ -85,7 +85,7 @@ public class UserController {
     @GetMapping("/deleteUser/{id}")
     public String deleteUser(@PathVariable(value = "id") long id) {
 
-        // call delete employee method
+        // call user employee method
         this.userService.deleteUserById(id);
         return "redirect:/admin";
     }

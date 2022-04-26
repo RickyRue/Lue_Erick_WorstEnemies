@@ -76,6 +76,8 @@ public class UserResponseController {
         return "my_responses";
     }
 
+
+// Calculates the scores for each user
     @GetMapping("/enemies")
     public String myEnemies(){
         HashMap<Long, Integer> scores = new HashMap<>();

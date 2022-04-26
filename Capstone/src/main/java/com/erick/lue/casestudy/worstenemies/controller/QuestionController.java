@@ -75,10 +75,10 @@ public class QuestionController {
     @GetMapping("/admin_update_question/{id}")
     public String showFormForUserUpdate(@PathVariable(value = "id") long id, Model model) {
 
-        // get employee from the service
+        // get uer from the service
         Question question = questionService.getQuestionById(id);
 
-        // set employee as a model attribute to pre-populate the form
+        // set user as a model attribute to pre-populate the form
         model.addAttribute("question", question);
         return "admin_update_question";
 
@@ -89,6 +89,7 @@ public class QuestionController {
     public String viewCards() {
         return "redirect:/cards/3";
     }
+// Saves the response of a user to their profile
 
     @GetMapping("/cards/{id}")
     public String getQuestions(@PathVariable(value = "id") long id, Model model) {

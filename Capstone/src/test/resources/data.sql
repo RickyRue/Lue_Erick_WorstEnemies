@@ -13,9 +13,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dumping database structure for worst_enemies_testdb
-CREATE DATABASE IF NOT EXISTS `worst_enemies_testdb` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `worst_enemies_testdb`;
 
 -- Dumping structure for table worst_enemies_testdb.hibernate_sequence
 CREATE TABLE IF NOT EXISTS `hibernate_sequence` (
