@@ -17,7 +17,7 @@ This project is built using Springboot, Java, HTML, CSS, JavaScript and Bootstra
 
 -[Installation](#Installation)
 
--[Grading Rubric](https://docs.google.com/document/d/1AgDZUG9jeYiV7L92cDVkrvcrapaRoajy4mBoG57F764/edit) 88.83% Done
+-[Grading Rubric](https://docs.google.com/document/d/1AgDZUG9jeYiV7L92cDVkrvcrapaRoajy4mBoG57F764/edit) 100% Done
 
 -[Figma Mock-Up Link](https://www.figma.com/file/h4cgmBr4LQWgtHecmfH2cn/Worst-Enemies---Prototype?node-id=2%3A2)
 
@@ -66,15 +66,15 @@ Password: 6j@NW.MfU9XiXjq
 
 ### Daily Progress
 
-April 25ts (100% Done)<br>
+April 25th (100% Done)<br>
 • Added in SQL Data <br>
 • Had Anthony run my app on his machine<br>
 
-April 22ts (93% Done)<br>
+April 22nd (93% Done)<br>
 • Made Presentation <br>
 • Fixed some formatting on ReadMe file.<br>
 
-April 21ts (85% Done)<br>
+April 21st (85% Done)<br>
 • Added in a parameterized test <br>
 • Able to display enemies of users.<br>
 
